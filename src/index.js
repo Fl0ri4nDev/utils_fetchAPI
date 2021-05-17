@@ -6,11 +6,8 @@ function displayResponse(myResponse) {
 }
 
 function parseJSONResponse(myResponse) {
-  myJSON = JSON.parse(myResponse);
-
-  // document.getElementById("app").innerHTML =  document.getElementById("app").innerHTML+ myResponse;
-  // var tmp=myJSON.getElementsByTagName('way')[0];
-  // document.getElementById("url").innerHTML = tmp;
+  myJSON = myResponse;
+  document.getElementById("app").innerHTML = myJSON;
 }
 
 function consoleResponse(myResponse) {
@@ -51,7 +48,6 @@ url_full = url_overpass;
 document.getElementById("url").innerHTML = url_full;
 
 fetchJSON(url_full, parseJSONResponse);
-document.getElementById("app").innerHTML = myJSON;
 
 //fetchJSON("https://jsonplaceholder.typicode.com/posts", displayResponse);
 //fetchJSON("https://jsonplaceholder.typicode.com/posts", consoleResponse);
